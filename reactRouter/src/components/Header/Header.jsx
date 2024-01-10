@@ -64,7 +64,8 @@ export default function Header() {
                             </li>
                             <li>
                                 <NavLink
-                                
+                                to="/github"
+                                    
                                 >
                                     Github
                                 </NavLink>
