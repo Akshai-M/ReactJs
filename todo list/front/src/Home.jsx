@@ -3,20 +3,24 @@ import Create from './Create.jsx';
 import axios from 'axios';
 
 function Home() {
-  const [todos, setTodo] = useState([]);
+  
+
+
+
+  const [todos, setTodos] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/get');
-        setTodo(response.data);
-      } catch (err) {
-        console.error(err);
+      try{
+        const response = await axios.get('http://localhost:3001/get')
+        setTodos(response.data)
+      } catch(error) {
+        console.log(error);
+        
       }
-    };
-
-    fetchData();
-  }, []);
+    }
+    fetchData()
+  }, [])
 
   return (
     <div>
@@ -24,7 +28,7 @@ function Home() {
       <Create />
       <br />
       {todos.length === 0 ? (
-        <div><h2>Loading...</h2></div>
+        <div><h2>List empty</h2></div>
       ) : (
         todos.map((todo, index) => (
           <div key={todo.id || index} className='flex border border-red-500 max-w-xs '>
@@ -38,6 +42,8 @@ function Home() {
           </div>
         ))
       )}
+
+
     </div>
   );
 }
