@@ -62,7 +62,13 @@ export default function Header() {
                                     Contact
                                 </NavLink>
                             </li>
-                            
+                            <li>
+                                <NavLink
+                                
+                                >
+                                    Github
+                                </NavLink>
+                            </li>
                             
                         </ul>
                     </div>
