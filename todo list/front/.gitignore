@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
+Satoshi_Complete
 .env
 
 node_modules
